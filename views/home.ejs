@@ -66,6 +66,21 @@
             editUserForm.submit();
         }
     
+         function deleteUser() {
+            
+            //Grab the delete form
+            const deleteUserForm = document.getElementById('deleteUserForm');
+
+            //Grab the id value from the form
+            const id = document.getElementById('delete_id').value
+
+            //insert the id into the action attribute of the form
+            deleteUserForm.action = '/users/' + id + '/delete';
+
+            //Submit the form
+            deleteUserForm.submit();
+        }
+        
     </script>
 
 </html>
